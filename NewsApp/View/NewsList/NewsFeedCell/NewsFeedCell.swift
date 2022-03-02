@@ -18,6 +18,8 @@ class NewsFeedCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.selectionStyle = .none
+        
         cellContainertView.layer.borderColor = UIColor.darkGray.cgColor
         cellContainertView.layer.borderWidth = 1
         

@@ -7,7 +7,12 @@
 
 import Foundation
 
-class NewsFeedsViewModel {
+protocol NewsFeedsViewModelProtocol {
+    func loadNewsFeedsPage(withSuccess success: @escaping () -> Void,
+                           withFailure fail: @escaping (String) -> Void)
+}
+
+class NewsFeedsViewModel : NewsFeedsViewModelProtocol {
     var cellViewModels = [BaseCellViewModel]()
     private var newsFeedStore: NewsFeedStoreProtocol
     var currentPage = 1

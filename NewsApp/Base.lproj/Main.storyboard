@@ -39,7 +39,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Dfu-C5-GWi"/>
                                 </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nFj-7V-4Eo">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nFj-7V-4Eo">
                                 <rect key="frame" x="0.0" y="149" width="414" height="713"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
@@ -69,6 +69,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-141" y="11"/>
+        </scene>
+        <!--News Feed Details View Controller-->
+        <scene sceneID="fCA-gl-3Y3">
+            <objects>
+                <viewController storyboardIdentifier="NewsFeedDetailsViewController" id="c1s-rv-TeR" customClass="NewsFeedDetailsViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eMR-xj-2nW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xUk-7Q-G1a">
+                                <rect key="frame" x="0.0" y="49" width="414" height="813"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="c1s-rv-TeR" id="PBe-4Q-h7c"/>
+                                    <outlet property="delegate" destination="c1s-rv-TeR" id="68L-Tl-Jwi"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GXW-iU-SmW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GXW-iU-SmW" firstAttribute="trailing" secondItem="xUk-7Q-G1a" secondAttribute="trailing" id="APH-qw-ega"/>
+                            <constraint firstItem="xUk-7Q-G1a" firstAttribute="top" secondItem="GXW-iU-SmW" secondAttribute="top" constant="5" id="EmZ-0o-EjN"/>
+                            <constraint firstItem="xUk-7Q-G1a" firstAttribute="leading" secondItem="GXW-iU-SmW" secondAttribute="leading" id="opU-gd-pai"/>
+                            <constraint firstItem="GXW-iU-SmW" firstAttribute="bottom" secondItem="xUk-7Q-G1a" secondAttribute="bottom" id="zbN-oL-Nug"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailsTableView" destination="xUk-7Q-G1a" id="Sni-Ur-463"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fsv-D0-I6s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1452" y="-662"/>
         </scene>
     </scenes>
     <resources>
