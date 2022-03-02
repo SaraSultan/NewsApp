@@ -137,6 +137,14 @@ extension NewsFeedViewController : UITableViewDataSource {
 
 extension NewsFeedViewController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cellViewModel = viewModel.cellViewModels[indexPath.row]
+        guard let newsFeedCellViewModel = cellViewModel as? NewsFeedCellViewModel else { return }
+        guard let article = newsFeedCellViewModel.article else { return }
+        let newsFeedDetailsViewModel = NewsFeedDetailsViewModel(article: article)
         
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        guard let detailsViewController = storyboard.instantiateViewController(withIdentifier: "NewsFeedDetailsViewController") as? NewsFeedDetailsViewController else { return }
+        detailsViewController.viewModel = newsFeedDetailsViewModel
+        self.navigationController?.pushViewController(detailsViewController, animated: true)
     }
 }
