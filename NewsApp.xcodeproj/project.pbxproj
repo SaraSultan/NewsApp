@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A40B0D0B27CD04E10009828E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B0D0A27CD04E10009828E /* AppDelegate.swift */; };
-		A40B0D0F27CD04E10009828E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B0D0E27CD04E10009828E /* ViewController.swift */; };
 		A40B0D1227CD04E10009828E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40B0D1027CD04E10009828E /* Main.storyboard */; };
 		A40B0D1427CD04E30009828E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40B0D1327CD04E30009828E /* Assets.xcassets */; };
 		A40B0D1727CD04E30009828E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40B0D1527CD04E30009828E /* LaunchScreen.storyboard */; };
@@ -16,6 +15,10 @@
 		A40B0D2C27CD04E30009828E /* NewsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B0D2B27CD04E30009828E /* NewsAppUITests.swift */; };
 		A40B0D2E27CD04E30009828E /* NewsAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B0D2D27CD04E30009828E /* NewsAppUITestsLaunchTests.swift */; };
 		A40B0D3F27CD0DCD0009828E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B0D3E27CD0DCD0009828E /* NetworkManager.swift */; };
+		A458DE5827CEDCCD00B6E775 /* NewsFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A458DE5727CEDCCD00B6E775 /* NewsFeedViewModel.swift */; };
+		A458DE5A27CEE5CE00B6E775 /* BaseCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A458DE5927CEE5CE00B6E775 /* BaseCellViewModel.swift */; };
+		A458DE5E27CEE62E00B6E775 /* CellConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A458DE5D27CEE62E00B6E775 /* CellConfigurable.swift */; };
+		A458DE6027CEE66600B6E775 /* NewsFeedCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A458DE5F27CEE66600B6E775 /* NewsFeedCellViewModel.swift */; };
 		A4E7204927CD922A00E34AD5 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E7204827CD922A00E34AD5 /* BaseRouter.swift */; };
 		A4E7204B27CD923800E34AD5 /* NewsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E7204A27CD923800E34AD5 /* NewsRouter.swift */; };
 		A4E7204E27CD936A00E34AD5 /* NewsFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E7204D27CD936A00E34AD5 /* NewsFeedStore.swift */; };
@@ -56,7 +59,6 @@
 		9EE26A1F8FB9F54A102A6104 /* Pods_NewsAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40B0D0727CD04E10009828E /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40B0D0A27CD04E10009828E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A40B0D0E27CD04E10009828E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A40B0D1127CD04E10009828E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A40B0D1327CD04E30009828E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A40B0D1627CD04E30009828E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +69,10 @@
 		A40B0D2B27CD04E30009828E /* NewsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAppUITests.swift; sourceTree = "<group>"; };
 		A40B0D2D27CD04E30009828E /* NewsAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A40B0D3E27CD0DCD0009828E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A458DE5727CEDCCD00B6E775 /* NewsFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewModel.swift; sourceTree = "<group>"; };
+		A458DE5927CEE5CE00B6E775 /* BaseCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCellViewModel.swift; sourceTree = "<group>"; };
+		A458DE5D27CEE62E00B6E775 /* CellConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfigurable.swift; sourceTree = "<group>"; };
+		A458DE5F27CEE66600B6E775 /* NewsFeedCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedCellViewModel.swift; sourceTree = "<group>"; };
 		A4E7204827CD922A00E34AD5 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		A4E7204A27CD923800E34AD5 /* NewsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRouter.swift; sourceTree = "<group>"; };
 		A4E7204D27CD936A00E34AD5 /* NewsFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedStore.swift; sourceTree = "<group>"; };
@@ -151,11 +157,11 @@
 		A40B0D0927CD04E10009828E /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				A458DE5C27CEE61100B6E775 /* Utilities */,
 				A4E7206027CDA20A00E34AD5 /* ViewModel */,
 				A4E7205C27CDA04600E34AD5 /* View */,
 				A40B0D3A27CD09420009828E /* Network */,
 				A40B0D0A27CD04E10009828E /* AppDelegate.swift */,
-				A40B0D0E27CD04E10009828E /* ViewController.swift */,
 				A40B0D1027CD04E10009828E /* Main.storyboard */,
 				A40B0D1327CD04E30009828E /* Assets.xcassets */,
 				A40B0D1527CD04E30009828E /* LaunchScreen.storyboard */,
@@ -198,6 +204,32 @@
 				A40B0D3E27CD0DCD0009828E /* NetworkManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		A458DE5627CEDCB500B6E775 /* NewsFeed */ = {
+			isa = PBXGroup;
+			children = (
+				A458DE5727CEDCCD00B6E775 /* NewsFeedViewModel.swift */,
+				A458DE5F27CEE66600B6E775 /* NewsFeedCellViewModel.swift */,
+			);
+			path = NewsFeed;
+			sourceTree = "<group>";
+		};
+		A458DE5B27CEE60400B6E775 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A458DE5927CEE5CE00B6E775 /* BaseCellViewModel.swift */,
+				A458DE5D27CEE62E00B6E775 /* CellConfigurable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A458DE5C27CEE61100B6E775 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A458DE5B27CEE60400B6E775 /* Protocols */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		A4E7204727CD921900E34AD5 /* Routers */ = {
@@ -249,6 +281,7 @@
 		A4E7206027CDA20A00E34AD5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A458DE5627CEDCB500B6E775 /* NewsFeed */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -515,12 +548,15 @@
 				A4E7205B27CD977600E34AD5 /* NetworkConstants.swift in Sources */,
 				A4E7204B27CD923800E34AD5 /* NewsRouter.swift in Sources */,
 				A40B0D3F27CD0DCD0009828E /* NetworkManager.swift in Sources */,
+				A458DE6027CEE66600B6E775 /* NewsFeedCellViewModel.swift in Sources */,
+				A458DE5827CEDCCD00B6E775 /* NewsFeedViewModel.swift in Sources */,
+				A458DE5A27CEE5CE00B6E775 /* BaseCellViewModel.swift in Sources */,
 				A4E7205127CD942900E34AD5 /* Article.swift in Sources */,
 				A4E7204927CD922A00E34AD5 /* BaseRouter.swift in Sources */,
 				A4E7206327CDA25C00E34AD5 /* NewsFeedCell.swift in Sources */,
 				A4E7205527CD959900E34AD5 /* NewsFeed.swift in Sources */,
 				A4E7204E27CD936A00E34AD5 /* NewsFeedStore.swift in Sources */,
-				A40B0D0F27CD04E10009828E /* ViewController.swift in Sources */,
+				A458DE5E27CEE62E00B6E775 /* CellConfigurable.swift in Sources */,
 				A4E7205927CD976500E34AD5 /* NetworkError.swift in Sources */,
 				A40B0D0B27CD04E10009828E /* AppDelegate.swift in Sources */,
 				A4E7205327CD944E00E34AD5 /* Source.swift in Sources */,

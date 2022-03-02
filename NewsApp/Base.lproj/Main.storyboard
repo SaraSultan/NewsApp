@@ -39,7 +39,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Dfu-C5-GWi"/>
                                 </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nFj-7V-4Eo">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nFj-7V-4Eo">
                                 <rect key="frame" x="0.0" y="149" width="414" height="713"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
@@ -61,6 +61,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="p59-Ds-LQ0"/>
+                    <connections>
+                        <outlet property="newsFeedTableView" destination="nFj-7V-4Eo" id="B8f-cM-KOw"/>
+                        <outlet property="newsFeedsSearchBar" destination="4OL-yz-oSf" id="JM2-RM-MC0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

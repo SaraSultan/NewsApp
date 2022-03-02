@@ -8,6 +8,9 @@ target 'NewsApp' do
   # Pods for NewsApp
 
 pod 'Alamofire'
+pod 'UIScrollView-InfiniteScroll'
+pod 'ProgressHUD'
+pod 'Kingfisher'
 
   target 'NewsAppTests' do
     inherit! :search_paths

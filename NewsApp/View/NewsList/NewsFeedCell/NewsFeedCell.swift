@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class NewsFeedCell: UITableViewCell {
 
@@ -19,7 +20,8 @@ class NewsFeedCell: UITableViewCell {
         // Initialization code
         cellContainertView.layer.borderColor = UIColor.darkGray.cgColor
         cellContainertView.layer.borderWidth = 1
-
+        
+        cellContainertView.layer.cornerRadius = 5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,4 +30,22 @@ class NewsFeedCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+}
+
+extension NewsFeedCell: CellConfigurable {
+    func setUp(model: BaseCellViewModel) {
+        guard let viewModel = model as? NewsFeedCellViewModel else { return }
+        
+        if let imageURL = viewModel.imageURL {
+            newsFeedImageView.kf.setImage(
+                with: URL(string: imageURL),
+                placeholder: UIImage(named: "placeholder"),
+                options:nil)
+        }else{
+            newsFeedImageView.image = UIImage(named: "placeholder")
+        }
+        
+        newsFeedDescriptionLabel.text = viewModel.description ?? "N/A"
+        newsFeedSourceLabel.text = viewModel.source ?? "N/A"
+    }
 }
