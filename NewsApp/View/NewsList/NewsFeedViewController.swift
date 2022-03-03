@@ -14,7 +14,7 @@ class NewsFeedViewController: UIViewController {
     @IBOutlet weak var newsFeedsSearchBar: UISearchBar!
     @IBOutlet weak var newsFeedTableView: UITableView!
     
-    private var viewModel : NewsFeedsViewModel = NewsFeedsViewModel()
+    private var viewModel : NewsFeedsViewModelProtocol = NewsFeedsViewModel()
     private var isSearching = true
     
     
@@ -53,7 +53,8 @@ class NewsFeedViewController: UIViewController {
         newsFeedTableView.dataSource = self
         
         newsFeedTableView.addInfiniteScroll { [weak self] (tableView) in
-            self?.viewModel.currentPage += 1
+            guard let vm = self?.viewModel as? NewsFeedsViewModel else { return }
+            vm.currentPage += 1
             self?.isSearching = false
             self?.loadData()
         }
@@ -94,8 +95,10 @@ class NewsFeedViewController: UIViewController {
 
 extension NewsFeedViewController : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        viewModel.query = searchText
-        viewModel.currentPage = 1
+        guard let vm = self.viewModel as? NewsFeedsViewModel else { return }
+
+        vm.query = searchText
+        vm.currentPage = 1
         isSearching = true
         NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(loadData), object: nil)
         self.perform(#selector(loadData), with: nil, afterDelay: 1)
@@ -105,7 +108,9 @@ extension NewsFeedViewController : UISearchBarDelegate {
 extension NewsFeedViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
-        viewModel.currentPage = 1
+        guard let vm = self.viewModel as? NewsFeedsViewModel else { return false }
+
+        vm.currentPage = 1
         isSearching = true
         loadData()
         return true
@@ -124,11 +129,15 @@ extension NewsFeedViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.cellViewModels.count
+        guard let vm = self.viewModel as? NewsFeedsViewModel else { return 0 }
+
+        return vm.cellViewModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellViewModel = viewModel.cellViewModels[indexPath.row]
+        guard let vm = self.viewModel as? NewsFeedsViewModel else { return UITableViewCell() }
+
+        let cellViewModel = vm.cellViewModels[indexPath.row]
         guard let cell = newsFeedTableView.dequeueReusableCell(withIdentifier: cellViewModel.cellIdentifier(), for: indexPath) as? CellConfigurable else { return UITableViewCell() }
         cell.setUp(model: cellViewModel)
         return cell
@@ -137,7 +146,9 @@ extension NewsFeedViewController : UITableViewDataSource {
 
 extension NewsFeedViewController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cellViewModel = viewModel.cellViewModels[indexPath.row]
+        guard let vm = self.viewModel as? NewsFeedsViewModel else { return }
+
+        let cellViewModel = vm.cellViewModels[indexPath.row]
         guard let newsFeedCellViewModel = cellViewModel as? NewsFeedCellViewModel else { return }
         guard let article = newsFeedCellViewModel.article else { return }
         let newsFeedDetailsViewModel = NewsFeedDetailsViewModel(article: article)
