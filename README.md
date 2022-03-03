@@ -8,10 +8,10 @@ Swift 5
 
 # Used Pods 
 
-'Alamofire'
-'UIScrollView-InfiniteScroll'
-'ProgressHUD'
-'Kingfisher'
+* 'Alamofire'
+* 'UIScrollView-InfiniteScroll'
+* 'ProgressHUD'
+* 'Kingfisher'
 
 # Author
 
